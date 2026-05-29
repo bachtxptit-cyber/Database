@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE — Hệ Thống Quản Lý Cửa Hàng Thời Trang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <span class="brand-icon">✦</span>
+            <span class="brand-name">LUXE</span>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section-label">Tổng quan</div>
+            <a href="#" class="nav-item active" data-page="dashboard">
+                <span class="nav-icon">◈</span><span>Dashboard</span>
+            </a>
+            <div class="nav-section-label">Bán hàng</div>
+            <a href="#" class="nav-item" data-page="pos">
+                <span class="nav-icon">◉</span><span>Lập hóa đơn</span>
+            </a>
+            <a href="#" class="nav-item" data-page="invoices">
+                <span class="nav-icon">◧</span><span>Hóa đơn</span>
+            </a>
+            <a href="#" class="nav-item" data-page="promotions">
+                <span class="nav-icon">◌</span><span>Ưu đãi</span>
+            </a>
+            <div class="nav-section-label">Kho & Hàng hóa</div>
+            <a href="#" class="nav-item" data-page="products">
+                <span class="nav-icon">◈</span><span>Sản phẩm</span>
+            </a>
+            <a href="#" class="nav-item" data-page="categories">
+                <span class="nav-icon">◍</span><span>Danh mục</span>
+            </a>
+            <a href="#" class="nav-item" data-page="warehouse">
+                <span class="nav-icon">◫</span><span>Kho hàng</span>
+            </a>
+            <a href="#" class="nav-item" data-page="imports">
+                <span class="nav-icon">◪</span><span>Nhập hàng</span>
+            </a>
+            <div class="nav-section-label">Quan hệ</div>
+            <a href="#" class="nav-item" data-page="customers">
+                <span class="nav-icon">◎</span><span>Khách hàng</span>
+            </a>
+            <a href="#" class="nav-item" data-page="managers">
+                <span class="nav-icon">◍</span><span>Quản lý</span>
+            </a>
+            <a href="#" class="nav-item" data-page="employees">
+                <span class="nav-icon">◍</span><span>Nhân viên</span>
+            </a>
+            <a href="#" class="nav-item" data-page="suppliers">
+                <span class="nav-icon">◑</span><span>Nhà cung cấp</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="store-status">
+                <span class="status-dot"></span>
+                <span>Hệ thống hoạt động</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-wrapper">
+        <header class="topbar">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <div class="topbar-title" id="pageTitle">Dashboard</div>
+            <div class="topbar-actions">
+                <span class="date-display" id="dateDisplay"></span>
+            </div>
+        </header>
+        <main class="content-area" id="contentArea">
+            <!-- Dynamic content loaded here -->
+        </main>
+    </div>
+
+    <!-- MODALS -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <h3 id="modalTitle">Modal</h3>
+            <button class="modal-close" id="modalClose">✕</button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+    <script src="{{ url_for('static', filename='products.js') }}"></script>
+    <script src="{{ url_for('static', filename='categories.js') }}"></script>
+    <script src="{{ url_for('static', filename='customers.js') }}"></script>
+    <script src="{{ url_for('static', filename='managers.js') }}"></script>
+    <script src="{{ url_for('static', filename='employees.js') }}"></script>
+    <script src="{{ url_for('static', filename='warehouse.js') }}"></script>
+    <script src="{{ url_for('static', filename='imports.js') }}"></script>
+    <script src="{{ url_for('static', filename='suppliers.js') }}"></script>
+    <script src="{{ url_for('static', filename='sales.js') }}"></script>
+    <script src="{{ url_for('static', filename='promotions.js') }}"></script>
+    <script src="{{ url_for('static', filename='invoices.js') }}"></script>
+</body>
+</html>
